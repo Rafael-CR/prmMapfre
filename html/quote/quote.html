@@ -15,7 +15,7 @@
     <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand ms" href="#">
-            <img src="../../assets/mapfre_logo.png" alt="" width="100" height="25" class="  me-auto">
+            <img src="../../assets/mapfre_logo.png" alt="" width="120" height="25" class="  me-auto">
           
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -210,7 +210,7 @@
                         <h5>Persona Moral</h5>
                         
                         <div class="row mb-3">
-                            <div class="col-md-4">
+                            <div class="col-md-8">
                                 <label for="razonSocial">Denominación o Razon social</label>
                                 <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
                             </div>
@@ -243,17 +243,58 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Descuentos y recargos
+                  Planes y descuentos
                 </button>
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="row mb-3">
                     <div class="col-md-4">
-                        <label for="descuento">Descuento</label>
-                        <input type="text" class="form-control" id="descuento" placeholder="" >
+                      <label class="form-check-label" >Selecciona los tipos de planes a cotizar</label>
+                      <br>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planAmplio" value="amplio">
+                        <label class="form-check-label" for="planAmplio">Amplio</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planLimitado" value="limitado">
+                        <label class="form-check-label" for="planLimitado">Limitado</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planRC" value="option3">
+                        <label class="form-check-label" for="planRC">Responsabilidad Civíl</label>
+                      </div>
                     </div>
+                    <div class="col-md-4">
+                      <label class="form-check-label" >Selecciona las formas de pago</label>
+                      <br>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="contado" value="contado">
+                        <label class="form-check-label" for="contado">Contado</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="semestral" value="semestral">
+                        <label class="form-check-label" for="semestral">Semestral</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="trimestral" value="trimestral">
+                        <label class="form-check-label" for="trimestral">Trimestral</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="mensual" value="mensual">
+                        <label class="form-check-label" for="mensual">Mensual</label>
+                      </div>
+                    </div>
+                   
+                      <div class="col-md-4">
+                          <label for="descuento">Descuento</label>
+                          <input type="text" class="form-control" id="descuento" placeholder="" >
+                      </div>
+                    
                   </div>
+                  
+                  
+                  
                 </div>
               </div>
             </div>
@@ -294,15 +335,16 @@
               </div>
             </div>
             <br>
-            <h5 class="card-subtitle mb-2 text-muted">Detalle de la cotización</h5>
+            <h5 class="card-subtitle mb-2 text-muted ">Detalle de la cotización</h5>
             <br>
-            <table class="table table-borderless" data-click-to-select="true">
-              <thead class="table-dark">
-                <tr>
+            <table class="table table-borderless " data-click-to-select="true">
+              <thead class="table-danger ">
+                <tr class="fs-5">
                   <th scope="col">Forma de pago</th>
                   <th scope="col"></th>
                   <th scope="col">Amplio</th>
-                  <th scope="col"></th>
+                  <th scope="col">Limitado</th>
+                  <th scope="col">R.C.</th>
                 </tr>
               </thead>
               <tbody>
@@ -311,23 +353,29 @@
                   <td>1 pago de</td>
                   <td>$10,000.00</td>
                   <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light">SEMESTRAL</th>
                   <td class="table-light">1 pago de</td>
                   <td class="table-light">$6,000.00</td>
-                  <td></td>
+                  <td class="table-light"></td>
+                  <td class="table-light"></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light"></th>
                   <td class="table-light">1 pago de</td>
                   <td class="table-light">$4,000.00</td>
-                  <td></td>
+                  <td class="table-light"></td>
+                  <td class="table-light"></td>
                 </tr>
                 <tr>
                   <th scope="row">TIMESTRAL</th>
                   <td >1 pago de</td>
                   <td >$1,000.00</td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                 </tr>
                 <tr>
@@ -335,18 +383,22 @@
                   <td >3 pagos de</td>
                   <td >$3,000.00</td>
                   <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light">MENSUAL</th>
                   <td class="table-light">1 pago de</td>
                   <td class="table-light">$1,000.00</td>
-                  <td></td>
+                  <td class="table-light"></td>
+                  <td class="table-light"></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light"></th>
                   <td class="table-light">11 pagos de</td>
                   <td class="table-light">$1,000.00</td>
-                  <td></td>
+                  <td class="table-light"></td>
+                  <td class="table-light"></td>
                 </tr>
               </tbody>
             </table>
@@ -359,64 +411,225 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    <table class="table table-borderless" data-click-to-select="true">
-                      <thead class="table-dark">
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Limite maximo de responsabilidad</th>
-                          <th scope="col">Deducible</th>
-                          <th scope="col">Amplio</th>
-                          <th scope="col"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">CONTADO</th>
-                          <td>1 pago de</td>
-                          <td>$10,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="table-light">SEMESTRAL</th>
-                          <td class="table-light">1 pago de</td>
-                          <td class="table-light">$6,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="table-light"></th>
-                          <td class="table-light">1 pago de</td>
-                          <td class="table-light">$4,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">TIMESTRAL</th>
-                          <td >1 pago de</td>
-                          <td >$1,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td >3 pagos de</td>
-                          <td >$3,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="table-light">MENSUAL</th>
-                          <td class="table-light">1 pago de</td>
-                          <td class="table-light">$1,000.00</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="table-light"></th>
-                          <td class="table-light">11 pagos de</td>
-                          <td class="table-light">$1,000.00</td>
-                          <td></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="table-responsive ">
+                      <table class="table table-borderless " data-click-to-select="true">
+                        <thead class="table-danger">
+                          <tr class="fs-5">
+                            <th scope="col">Coberturas</th>
+                            <th scope="col">Limite maximo de responsabilidad</th>
+                            <th scope="col">Deducible</th>
+                            <th scope="col">Amplio</th>
+                            <th scope="col">Limitado</th>
+                            <th scope="col">R.C.</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr >
+                            <th scope="row">DAÑOS MATERIALES</th>
+                            <td>Valor comercial</td>
+                            <td>
+                              <select id="deducibleDM" class="form-select" aria-label="Default select example">
+                                <option value="5" selected>5%</option>
+                              </select>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr class="table-light">
+                            <th scope="row" >ROBO TOTAL</th>
+                            <td >Valor comercial</td>
+                            <td >
+                              <select id="deducibleRT" class="form-select" aria-label="Default select example">
+                                <option value="5" selected>10%</option>
+                              </select>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" >RESPONSABILIDAD CIVIL BIENES</th>
+                            <td >
+                              <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="rcBienes" placeholder="" value="$1,500,000.00" readonly>
+                              </div>
+                            </td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="table-light">
+                            <th scope="row">RESPONSABILIDAD CIVIL PERSONAS</th>
+                            <td >
+                              <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="rcPersonas" placeholder="" value="$1,500,000.00" readonly>
+                              </div>
+                            </td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">GASTOS MÉDICOS</th>
+                            <td >
+                              <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$200,000.00" readonly>
+                              </div>
+                            </td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="table-light">
+                            <th scope="row" >ASISTENCIA COMPLETA</th>
+                            <td >AMPARADA</td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" >DEFENSA JURIDICA</th>
+                            <td >AMPARADA</td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="table-light">
+                            <th scope="row" >ACCIDENTES AL CONDUCTOR</th>
+                            <td>
+                              <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$100,000.00" readonly>
+                              </div>
+                            </td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" >R. C. CATASTRÓFICA</th>
+                            <td >
+                              <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$2,000,000.00" readonly>
+                              </div>
+                            </td>
+                            <td >-</td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                            <td class="text-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
+            </div>
+            <br>
+            <br>
+            <div class="text-center">
+              <button id="btnGuardar" type="button" class="btn btn-danger  btn-lg text-center">Guardar</button>
+              <button id="btnEnviar" type="button" class="btn btn-danger  btn-lg text-center">Enviar</button>
+              <button id="btnImprimir" type="button" class="btn btn-danger  btn-lg text-center">Imprimir</button>
             </div>
           </div>
         </div>
