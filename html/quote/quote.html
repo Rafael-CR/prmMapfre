@@ -105,8 +105,8 @@
                       <div class="col-md-4">
                         <label for="marca">Marca</label>
                         <input type="text" class="form-control" id="marca" placeholder="" >
+                      </div>
                     </div>
-                  </div>
                     <div class="row mb-3">
                         <div class="col-md-4">
                             <label for="descripcion">Descripción</label>
@@ -125,20 +125,7 @@
                           </select>
                       </div>
                     </div>
-                   <!--  <div class="row mb-3">
-                        <div class="col-md-4">
-                            <label for="numeroSerie">Número de serie</label>
-                            <input type="text" class="form-control" id="numeroSerie" placeholder="Número de serie" >
-                        </div>
-                        <div class="col-md-4">
-                            <label for="placas">Placas</label>
-                            <input type="text" class="form-control" id="placas" placeholder="Placas" >
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="numeroMotor">Número de motor</label>
-                            <input type="text" class="form-control" id="numeroMotor" placeholder="Número de motor" >
-                        </div>
-                    </div> -->
+                   
                 </div>
               </div>
             </div>
@@ -405,11 +392,11 @@
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoberturas" aria-expanded="false" aria-controls="collapseCoberturas">
                     Coberturas
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div id="collapseCoberturas" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <div class="table-responsive ">
                       <table class="table table-borderless " data-click-to-select="true">
@@ -630,6 +617,174 @@
               <button id="btnGuardar" type="button" class="btn btn-danger  btn-lg text-center">Guardar</button>
               <button id="btnEnviar" type="button" class="btn btn-danger  btn-lg text-center">Enviar</button>
               <button id="btnImprimir" type="button" class="btn btn-danger  btn-lg text-center">Imprimir</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <h3>Solicitud</h3>
+        <br>
+        <br>
+        <h4>Datos Complementarios</h4>
+        <br>
+        <div class="accordion accordion-flush" id="accordionComplementarios">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatosCompl" aria-expanded="false" aria-controls="collapseDatosCompl">
+               Datos del vehículo
+              </button>
+            </h2>
+            <div id="collapseDatosCompl" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionComplementarios">
+              <div class="accordion-body">
+                 <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="numeroSerie">Número de serie</label>
+                        <input type="text" class="form-control" id="numeroSerie" placeholder="Número de serie" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="placas">Placas</label>
+                        <input type="text" class="form-control" id="placas" placeholder="Placas" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="numeroMotor">Número de motor</label>
+                        <input type="text" class="form-control" id="numeroMotor" placeholder="Número de motor" >
+                    </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatosContratante" aria-expanded="false" aria-controls="collapseDatosContratante">
+               Datos del contratante
+              </button>
+            </h2>
+            <div id="collapseDatosContratante" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionComplementarios">
+              <div class="accordion-body">
+                <div class="row mb-3">
+                  <label for="rfc">¿Los datos del contratante son los mismos del conductor habitual?</label>
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosIguales">
+                      <label class="form-check-label" for="datosIguales">
+                          Si
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosDiferentes">
+                      <label class="form-check-label" for="datosDiferentes">
+                          No
+                      </label>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                  </div>
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaFisica">
+                      <label class="form-check-label" for="personaFisica">
+                          Persona Física
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaMoral">
+                      <label class="form-check-label" for="personaMoral">
+                          Persona Moral
+                      </label>
+                  </div>
+                </div>
+              <div id="containerPersonaFisica">
+                  <br>
+                  <h5>Persona Fisica</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" placeholder="Nombre" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="aPaterno">Apellido paterno</label>
+                          <input type="text" class="form-control" id="aPaterno" placeholder="Apellido paterno" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="aMaterno">Apellido materno</label>
+                          <input type="text" class="form-control" id="aMaterno" placeholder="Apellido materno" >
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="fechaNacimiento">Fecha de nacimiento</label>
+                          <input type="text" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="edad">Edad</label>
+                          <input type="text" class="form-control" id="edad" placeholder="Edad" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="sexo">Sexo</label>
+                          <select id="sexo" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <div id="containerPersonaMoral">
+                  <br>
+                  <h5>Persona Moral</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-8">
+                          <label for="razonSocial">Denominación o Razon social</label>
+                          <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="fechaConstitucion">Fecha de constitución</label>
+                          <input type="text" class="form-control" id="fechaConstitucion" placeholder="Fecha de constitución" >
+                      </div>
+                      
+                  </div>
+              </div>
+              <br>
+              <h5>Domicilio</h5>
+              <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="cp">Código Postal</label>
+                      <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estado">Estado</label>
+                      <input type="text" class="form-control" id="estado" placeholder="Estado" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="poblacion">Población</label>
+                      <input type="text" class="form-control" id="poblacion" placeholder="Población" >
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConductorHabitual" aria-expanded="false" aria-controls="collapseConductorHabitual">
+                Datos del conductor habitual
+              </button>
+            </h2>
+            <div id="collapseConductorHabitual" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionComplementarios">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeneficiario" aria-expanded="false" aria-controls="collapseBeneficiario">
+                Datos del beneficiario preferente
+              </button>
+            </h2>
+            <div id="collapseBeneficiario" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionComplementarios">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
             </div>
           </div>
         </div>
