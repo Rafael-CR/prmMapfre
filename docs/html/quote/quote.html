@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="../../styles/main.css" rel="stylesheet" >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../scripts/quote/quote.js"></script>
 
     <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
         <div class="container-fluid">
@@ -142,19 +143,19 @@
                             <input type="text" class="form-control" id="rfc" placeholder="RFC" >
                         </div>
                         <div class="col-md-4">
-                            <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaFisica">
+                            <input class="form-check-input" type="radio" name="tipoPersonaCotizacion" id="personaFisicaCotizacion" value="personaFisica">
                             <label class="form-check-label" for="personaFisica">
                                 Persona Física
                             </label>
                         </div>
                         <div class="form-group col-md-4">
-                            <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaMoral">
+                            <input class="form-check-input" type="radio" name="tipoPersonaCotizacion" id="personaMoralCotizacion" value="personaMoral">
                             <label class="form-check-label" for="personaMoral">
                                 Persona Moral
                             </label>
                         </div>
                     </div>
-                    <div id="containerPersonaFisica">
+                    <div id="containerPersonaFisicaCotizacion">
                         <br>
                         <h5>Persona Fisica</h5>
                         
@@ -191,7 +192,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="containerPersonaMoral">
+                    <div id="containerPersonaMoralCotizacion">
                         <br>
                         <h5>Persona Moral</h5>
                         
@@ -295,29 +296,44 @@
           <div class="card-body">
             <h3 class="card-title mb-2">Resultados de la cotización</h3>
             <br>
-            <h5 class="card-subtitle mb-2 text-muted">Datos del vehículo</h5>
+            
+            <div class="row mb-3">
+              <div class="form-group col-md-4">
+                <h5 class="card-subtitle mb-2 text-muted">Datos del vehículo</h5>
+              </div>
+              <div class="col-md-4">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="editaDatosBtn">
+                  <label class="form-check-label" for="editaDatosBtn">Editar datos</label>
+                </div>
+              </div>
+              <!-- <div class="col-md-4">
+                <input type="checkbox" class="btn-check" id="editaDatosBtn" autocomplete="off">
+                <label class="btn btn-outline-danger" for="editaDatosBtn">Editar datos</label><br>
+              </div> -->
+            </div>
             <div class="row mb-3">
               <div class="form-group col-md-4">
                   <label for="yearRes">Año</label>
-                  <input type="text" class="form-control" id="yearRes" value="2020" readonly>
+                  <input type="text" class="form-control" id="yearRes" value="2020" disabled="true">
               </div>
               <div class="col-md-4">
                 <label for="marcaRes">Marca</label>
-                <input type="text" class="form-control" id="marcaRes" value="Honda" readonly>
+                <input type="text" class="form-control" id="marcaRes" value="Honda" disabled="true">
               </div>
               <div class="col-md-4">
                 <label for="descripcionRes">Descripción</label>
-                <input type="text" class="form-control" id="descripcionRes" value="CIVIC CVT 5PTS AIRE" readonly>
+                <input type="text" class="form-control" id="descripcionRes" value="CIVIC CVT 5PTS AIRE" disabled="true">
               </div>
             </div>
             <div class="row mb-3">
               <div class="form-group col-md-4">
                   <label for="estadoRes">Estado</label>
-                  <input type="text" class="form-control" id="estadoRes" value="CDMX" readonly>
+                  <input type="text" class="form-control" id="estadoRes" value="CDMX" disabled="true">
               </div>
               <div class="col-md-4">
                 <label for="poblacionRes">Población</label>
-                <input type="text" class="form-control" id="poblacionRes" value="COYOACAN" readonly>
+                <input type="text" class="form-control" id="poblacionRes" value="COYOACAN" disabled="true">
               </div>
             </div>
             <br>
@@ -328,38 +344,94 @@
                 <tr class="fs-5">
                   <th scope="col">Forma de pago</th>
                   <th scope="col"></th>
-                  <th scope="col">Amplio</th>
-                  <th scope="col">Limitado</th>
-                  <th scope="col">R.C.</th>
+                  <th scope="col">
+                    <div class="d-flex justify-content-center">
+                      Amplio
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="d-flex justify-content-center">
+                      Limitado
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="d-flex justify-content-center">
+                      R.C.
+                    </div>
+                  </th>
+                </tr>
+                <tr class="fs-5">
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"  >
+                    <div class="d-flex justify-content-center">
+                      <input class="form-check-input" type="radio" name="radioPlan" id="planAmplioRadio" value="amplio" aria-label="...">
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="d-flex justify-content-center">
+                      <input class="form-check-input" type="radio" name="radioPlan" id="planLimitadoRadio" value="limitado" aria-label="...">
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="d-flex justify-content-center">
+                      <input class="form-check-input" type="radio" name="radioPlan" id="planRCRadio" value="rc" aria-label="...">
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">CONTADO</th>
+                  <th scope="row">
+                    <input class="form-check-input" type="radio" name="radioFormaPago" id="pagoContado" value="contado" >
+                    <label class="form-check-label" for="pagoContado">  CONTADO</label>
+                  </th>
                   <td>1 pago de</td>
-                  <td>$10,000.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      $10,000.00
+                    </div>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <th scope="row" class="table-light">SEMESTRAL</th>
+                  <th scope="row" class="table-light">
+                    <input class="form-check-input" type="radio" name="radioFormaPago" id="pagoSemestral" value="semestral" >
+                    <label class="form-check-label" for="pagoSemestral">  SEMESTRAL</label>
+                  </th>
                   <td class="table-light">1 pago de</td>
-                  <td class="table-light">$6,000.00</td>
+                  <td class="table-light">
+                    <div class="d-flex justify-content-center">
+                      $6,000.00
+                    </div>
+                  </td>
                   <td class="table-light"></td>
                   <td class="table-light"></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light"></th>
                   <td class="table-light">1 pago de</td>
-                  <td class="table-light">$4,000.00</td>
+                  <td class="table-light">
+                    <div class="d-flex justify-content-center">
+                      $4,000.00
+                    </div>
+                  </td>
                   <td class="table-light"></td>
                   <td class="table-light"></td>
                 </tr>
                 <tr>
-                  <th scope="row">TIMESTRAL</th>
+                  <th scope="row">
+                    <input class="form-check-input" type="radio" name="radioFormaPago" id="pagoTrimestral" value="trimestral" >
+                    <label class="form-check-label" for="pagoTrimestral">  TRIMESTRAL</label>
+                  </th>
                   <td >1 pago de</td>
-                  <td >$1,000.00</td>
+                  <td >
+                    <div class="d-flex justify-content-center">
+                      $1,000.00
+                    </div>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -367,22 +439,35 @@
                 <tr>
                   <th scope="row"></th>
                   <td >3 pagos de</td>
-                  <td >$3,000.00</td>
+                  <td > <div class="d-flex justify-content-center">
+                    $3,000.00
+                  </div></td>
                   <td></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <th scope="row" class="table-light">MENSUAL</th>
+                  <th scope="row" class="table-light">
+                    <input class="form-check-input" type="radio" name="radioFormaPago" id="pagoMensual" value="mensual" >
+                    <label class="form-check-label" for="pagoMensual">  MENSUAL</label>
+                  </th>
                   <td class="table-light">1 pago de</td>
-                  <td class="table-light">$1,000.00</td>
+                  <td class="table-light">
+                    <div class="d-flex justify-content-center">
+                      $1,000.00
+                    </div>
+                  </td>
                   <td class="table-light"></td>
                   <td class="table-light"></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table-light"></th>
                   <td class="table-light">11 pagos de</td>
-                  <td class="table-light">$1,000.00</td>
+                  <td class="table-light">
+                    <div class="d-flex justify-content-center">
+                      $10,000.00
+                    </div>
+                  </td>
                   <td class="table-light"></td>
                   <td class="table-light"></td>
                 </tr>
@@ -613,15 +698,18 @@
             <br>
             <br>
             <div class="text-center">
-              <button id="btnGuardar" type="button" class="btn btn-danger  btn-lg text-center">Guardar</button>
-              <button id="btnEnviar" type="button" class="btn btn-danger  btn-lg text-center">Enviar</button>
-              <button id="btnImprimir" type="button" class="btn btn-danger  btn-lg text-center">Imprimir</button>
+              <button id="btnGuardar" type="button" class="btn btn-outline-danger  btn-lg text-center">Guardar</button>
+              <button id="btnEnviar" type="button" class="btn btn-outline-danger  btn-lg text-center">Enviar</button>
+              <button id="btnImprimir" type="button" class="btn btn-outline-danger  btn-lg text-center">Imprimir</button>
+              <br>
+              <br>
+              <button id="btnEmision" type="button" class="btn btn-danger  btn-lg text-center">Solicitud de emisión</button>
             </div>
           </div>
         </div>
         <br>
         <br>
-        <h3>Solicitud</h3>
+        <h3>Solicitud de Emisión de póliza</h3>
         <br>
         <br>
         <h4>Datos Complementarios</h4>
@@ -677,10 +765,7 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <div class="col-md-4">
-                      <label for="rfc">RFC</label>
-                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
-                  </div>
+                  
                   <div class="col-md-4">
                       <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaFisica">
                       <label class="form-check-label" for="personaFisica">
@@ -694,7 +779,7 @@
                       </label>
                   </div>
                 </div>
-              <div id="containerPersonaFisica">
+                <div id="containerPersonaFisica">
                   <br>
                   <h5>Persona Fisica</h5>
                   
@@ -730,8 +815,18 @@
                           </select>
                       </div>
                   </div>
-              </div>
-              <div id="containerPersonaMoral">
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="homoclave">Homoclave</label>
+                      <input type="text" class="form-control" id="homoclave" placeholder="Homoclave" >
+                    </div>
+                  </div>
+                </div>
+                <div id="containerPersonaMoral">
                   <br>
                   <h5>Persona Moral</h5>
                   
@@ -746,23 +841,69 @@
                       </div>
                       
                   </div>
-              </div>
-              <br>
-              <h5>Domicilio</h5>
-              <div class="row mb-3">
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="representanteLegal">Nombre del representante Legal</label>
+                      <input type="text" class="form-control" id="representanteLegal" placeholder="Representante Legal" >
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <h5>Datos de contacto</h5>
+                <div class="row mb-3">
                   <div class="col-md-4">
-                      <label for="cp">Código Postal</label>
-                      <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                      <label for="mailContacto">Correo electrónico</label>
+                      <input type="text" class="form-control" id="mailContacto" placeholder="Correo electrónico" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="celularContacto">Teléfono celular</label>
+                      <input type="text" class="form-control" id="celularContacto" placeholder="Teléfono celular" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="telefonoContacto">Teléfono fijo</label>
+                      <input type="text" class="form-control" id="telefonoContacto" placeholder="Teléfono fijo" >
+                  </div>
+                </div>
+                <br>
+                <h5>Domicilio</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="form-control" id="calle" placeholder="Calle" >
+                  </div>
+                  <div class="col-md-4">
+                    <label for="numExterior">Número exterior</label>
+                    <input type="text" class="form-control" id="numExterior" placeholder="Número exterior" >
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="numInterior">Número interior</label>
+                    <input type="text" class="form-control" id="numInterior" placeholder="Número interior" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="colonia">Colonia</label>
+                      <input type="text" class="form-control" id="colonia" placeholder="Colonia" >
                   </div>
                   <div class="col-md-4">
                       <label for="estado">Estado</label>
                       <input type="text" class="form-control" id="estado" placeholder="Estado" >
                   </div>
                   <div class="form-group col-md-4">
-                      <label for="poblacion">Población</label>
-                      <input type="text" class="form-control" id="poblacion" placeholder="Población" >
+                      <label for="poblacion">Ciudad o Población</label>
+                      <input type="text" class="form-control" id="poblacion" placeholder="Ciudad o Población" >
                   </div>
-              </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="cp">Código Postal</label>
+                    <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -773,7 +914,164 @@
               </button>
             </h2>
             <div id="collapseConductorHabitual" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionComplementarios">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              <div class="accordion-body">
+                <div class="row mb-3">
+                  <label for="rfc">¿Los datos del contratante son los mismos del conductor habitual?</label>
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosIguales">
+                      <label class="form-check-label" for="datosIguales">
+                          Si
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosDiferentes">
+                      <label class="form-check-label" for="datosDiferentes">
+                          No
+                      </label>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaFisica">
+                      <label class="form-check-label" for="personaFisica">
+                          Persona Física
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaMoral">
+                      <label class="form-check-label" for="personaMoral">
+                          Persona Moral
+                      </label>
+                  </div>
+                </div>
+                <div id="containerPersonaFisica">
+                  <br>
+                  <h5>Persona Fisica</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" placeholder="Nombre" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="aPaterno">Apellido paterno</label>
+                          <input type="text" class="form-control" id="aPaterno" placeholder="Apellido paterno" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="aMaterno">Apellido materno</label>
+                          <input type="text" class="form-control" id="aMaterno" placeholder="Apellido materno" >
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="fechaNacimiento">Fecha de nacimiento</label>
+                          <input type="text" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="edad">Edad</label>
+                          <input type="text" class="form-control" id="edad" placeholder="Edad" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="sexo">Sexo</label>
+                          <select id="sexo" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="homoclave">Homoclave</label>
+                      <input type="text" class="form-control" id="homoclave" placeholder="Homoclave" >
+                    </div>
+                  </div>
+                </div>
+                <div id="containerPersonaMoral">
+                  <br>
+                  <h5>Persona Moral</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-8">
+                          <label for="razonSocial">Denominación o Razon social</label>
+                          <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="fechaConstitucion">Fecha de constitución</label>
+                          <input type="text" class="form-control" id="fechaConstitucion" placeholder="Fecha de constitución" >
+                      </div>
+                      
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="representanteLegal">Nombre del representante Legal</label>
+                      <input type="text" class="form-control" id="representanteLegal" placeholder="Representante Legal" >
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <h5>Datos de contacto</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="mailContacto">Correo electrónico</label>
+                      <input type="text" class="form-control" id="mailContacto" placeholder="Correo electrónico" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="celularContacto">Teléfono celular</label>
+                      <input type="text" class="form-control" id="celularContacto" placeholder="Teléfono celular" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="telefonoContacto">Teléfono fijo</label>
+                      <input type="text" class="form-control" id="telefonoContacto" placeholder="Teléfono fijo" >
+                  </div>
+                </div>
+                <br>
+                <h5>Domicilio</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="form-control" id="calle" placeholder="Calle" >
+                  </div>
+                  <div class="col-md-4">
+                    <label for="numExterior">Número exterior</label>
+                    <input type="text" class="form-control" id="numExterior" placeholder="Número exterior" >
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="numInterior">Número interior</label>
+                    <input type="text" class="form-control" id="numInterior" placeholder="Número interior" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="colonia">Colonia</label>
+                      <input type="text" class="form-control" id="colonia" placeholder="Colonia" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estado">Estado</label>
+                      <input type="text" class="form-control" id="estado" placeholder="Estado" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="poblacion">Ciudad o Población</label>
+                      <input type="text" class="form-control" id="poblacion" placeholder="Ciudad o Población" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="cp">Código Postal</label>
+                    <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="accordion-item">
@@ -783,7 +1081,164 @@
               </button>
             </h2>
             <div id="collapseBeneficiario" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionComplementarios">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              <div class="accordion-body">
+                <div class="row mb-3">
+                  <label for="rfc">¿Los datos del contratante son los mismos del conductor habitual?</label>
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosIguales">
+                      <label class="form-check-label" for="datosIguales">
+                          Si
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="datosContratanteRadio" id="datosDiferentes">
+                      <label class="form-check-label" for="datosDiferentes">
+                          No
+                      </label>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaFisica">
+                      <label class="form-check-label" for="personaFisica">
+                          Persona Física
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaRadio" id="personaMoral">
+                      <label class="form-check-label" for="personaMoral">
+                          Persona Moral
+                      </label>
+                  </div>
+                </div>
+                <div id="containerPersonaFisica">
+                  <br>
+                  <h5>Persona Fisica</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" placeholder="Nombre" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="aPaterno">Apellido paterno</label>
+                          <input type="text" class="form-control" id="aPaterno" placeholder="Apellido paterno" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="aMaterno">Apellido materno</label>
+                          <input type="text" class="form-control" id="aMaterno" placeholder="Apellido materno" >
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="fechaNacimiento">Fecha de nacimiento</label>
+                          <input type="text" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="edad">Edad</label>
+                          <input type="text" class="form-control" id="edad" placeholder="Edad" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="sexo">Sexo</label>
+                          <select id="sexo" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="homoclave">Homoclave</label>
+                      <input type="text" class="form-control" id="homoclave" placeholder="Homoclave" >
+                    </div>
+                  </div>
+                </div>
+                <div id="containerPersonaMoral">
+                  <br>
+                  <h5>Persona Moral</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-8">
+                          <label for="razonSocial">Denominación o Razon social</label>
+                          <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="fechaConstitucion">Fecha de constitución</label>
+                          <input type="text" class="form-control" id="fechaConstitucion" placeholder="Fecha de constitución" >
+                      </div>
+                      
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfc" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="representanteLegal">Nombre del representante Legal</label>
+                      <input type="text" class="form-control" id="representanteLegal" placeholder="Representante Legal" >
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <h5>Datos de contacto</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="mailContacto">Correo electrónico</label>
+                      <input type="text" class="form-control" id="mailContacto" placeholder="Correo electrónico" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="celularContacto">Teléfono celular</label>
+                      <input type="text" class="form-control" id="celularContacto" placeholder="Teléfono celular" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="telefonoContacto">Teléfono fijo</label>
+                      <input type="text" class="form-control" id="telefonoContacto" placeholder="Teléfono fijo" >
+                  </div>
+                </div>
+                <br>
+                <h5>Domicilio</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="form-control" id="calle" placeholder="Calle" >
+                  </div>
+                  <div class="col-md-4">
+                    <label for="numExterior">Número exterior</label>
+                    <input type="text" class="form-control" id="numExterior" placeholder="Número exterior" >
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="numInterior">Número interior</label>
+                    <input type="text" class="form-control" id="numInterior" placeholder="Número interior" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="colonia">Colonia</label>
+                      <input type="text" class="form-control" id="colonia" placeholder="Colonia" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estado">Estado</label>
+                      <input type="text" class="form-control" id="estado" placeholder="Estado" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="poblacion">Ciudad o Población</label>
+                      <input type="text" class="form-control" id="poblacion" placeholder="Ciudad o Población" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="cp">Código Postal</label>
+                    <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
