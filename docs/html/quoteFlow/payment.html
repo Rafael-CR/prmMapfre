@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de pago</title>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../../styles/main.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../scripts/quoteFlow/issueRequest.js"></script>
+
+    <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ms" href="../index.html">
+            <img src="../../assets/mapfre_logo.png" alt="" width="120" height="25" class="  me-auto">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../quoteFlow/quote.html">Cotizar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Mis cotizaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Mis pólizas</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <br><br><br>
+      <div class="container bg-light" id="contenedorPrincipal">
+        <h3>Forma de pago</h3>
+        <br>
+        <br>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                Modo de pago  ????
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="agente">Tipo de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">Pago en línea</option>
+                  <option value="2">Domiciliación</option>
+                  <option value="3">Referencia bancaria</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="agente">Medio de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">Cuenta CLABE / Débito</option>
+                  <option value="2">Tarjeta de crédito</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="agente">Medio de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">VISA</option>
+                  <option value="2">Master Card</option>
+                  <option value="3">American Express</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="agente">Banco</label>
+                <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccionar</option>
+                <option value="1">BANAMEX</option>
+                <option value="2">BBVA</option>
+                <option value="3">HSBC</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="nombreTitular">Nombre del Titular</label>
+                <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre del titular" >
+            </div>
+            <div class="col-md-4">
+                <label for="numeroTarjeta">Número de tarjeta</label>
+                <input type="text" class="form-control" id="numeroTarjeta" placeholder="Número de tarjeta" >
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="fechaVencimiento">Fecha de vencimiento</label>
+                <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AA" >
+            </div>
+            <div class="col-md-4">
+                <label for="cvv">Código de seguridad</label>
+                <input type="text" class="form-control" id="cvv" placeholder="Código de seguridad" >
+            </div>
+        </div>
+        <br><br>
+        <div class="text-center">
+            <button id="btnVolver" type="button" class="btn btn-outline-danger  btn-lg text-center">Volver</button>
+            <button id="btnEmitir" type="button" class="btn btn-danger  btn-lg text-center">Emitir póliza</button>
+            <br>
+            <br>
+            
+          </div>
+      </div>
+</body>
+</html>

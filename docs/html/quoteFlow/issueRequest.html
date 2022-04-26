@@ -392,6 +392,164 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOtroContratante" aria-expanded="false" aria-controls="collapseOtroContratante">
+                Agregar otro contratante
+              </button>
+            </h2>
+            <div id="collapseOtroContratante" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionComplementarios">
+              <div class="accordion-body">
+                <div class="row mb-3">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switchNuevoContratante">
+                    <label class="form-check-label" for="switchNuevoContratante">Agregar otro contratante</label>
+                  </div>
+                </div>
+                
+                <div class="row mb-3">
+                  
+                  <div class="col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaNuevoContratante" id="personaFisicaNuevoContratante" value="personaFisica">
+                      <label class="form-check-label" for="personaFisica">
+                          Persona Física
+                      </label>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input class="form-check-input" type="radio" name="tipoPersonaNuevoContratante" id="personaMoralNuevoContratante" value="personaMoral">
+                      <label class="form-check-label" for="personaMoral">
+                          Persona Moral
+                      </label>
+                  </div>
+                </div>
+                <div id="personaFisicaNuevoContratanteDiv">
+                  <br>
+                  <h5>Persona Fisica</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombreNContratante" placeholder="Nombre" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="aPaterno">Apellido paterno</label>
+                          <input type="text" class="form-control" id="aPaternoNContratante" placeholder="Apellido paterno" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="aMaterno">Apellido materno</label>
+                          <input type="text" class="form-control" id="aMaternoNContratante" placeholder="Apellido materno" >
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-md-4">
+                          <label for="fechaNacimiento">Fecha de nacimiento</label>
+                          <input type="text" class="form-control" id="fechaNacimientoNContratante" placeholder="Fecha de nacimiento" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="edad">Edad</label>
+                          <input type="text" class="form-control" id="edadNContratante" placeholder="Edad" >
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="sexo">Sexo</label>
+                          <select id="sexoNContratante" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfcFisicaNContratante" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="homoclave">Homoclave</label>
+                      <input type="text" class="form-control" id="homoclaveNContratante" placeholder="Homoclave" >
+                    </div>
+                  </div>
+                </div>
+                <div id="personaMoralNuevoContratanteDiv">
+                  <br>
+                  <h5>Persona Moral</h5>
+                  
+                  <div class="row mb-3">
+                      <div class="col-md-8">
+                          <label for="razonSocial">Denominación o Razon social</label>
+                          <input type="text" class="form-control" id="razonSocialNContratante" placeholder="Denominación o Razon social" >
+                      </div>
+                      <div class="col-md-4">
+                          <label for="fechaConstitucion">Fecha de constitución</label>
+                          <input type="text" class="form-control" id="fechaConstitucionNContratante" placeholder="Fecha de constitución" >
+                      </div>
+                      
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label for="rfc">RFC</label>
+                      <input type="text" class="form-control" id="rfcMoralNContratante" placeholder="RFC" >
+                    </div>
+                    <div class="col-md-4">
+                      <label for="representanteLegal">Nombre del representante Legal</label>
+                      <input type="text" class="form-control" id="representanteLegalNContratante" placeholder="Representante Legal" >
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <h5>Datos de contacto</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="mailContacto">Correo electrónico</label>
+                      <input type="text" class="form-control" id="mailContactoNContratante" placeholder="Correo electrónico" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="celularContacto">Teléfono celular</label>
+                      <input type="text" class="form-control" id="celularContactoNContratante" placeholder="Teléfono celular" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="telefonoContacto">Teléfono fijo</label>
+                      <input type="text" class="form-control" id="telefonoContactoNContratante" placeholder="Teléfono fijo" >
+                  </div>
+                </div>
+                <br>
+                <h5>Domicilio</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="form-control" id="calleNContratante" placeholder="Calle" >
+                  </div>
+                  <div class="col-md-4">
+                    <label for="numExterior">Número exterior</label>
+                    <input type="text" class="form-control" id="numExteriorNContratante" placeholder="Número exterior" >
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="numInterior">Número interior</label>
+                    <input type="text" class="form-control" id="numInteriorNContratante" placeholder="Número interior" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="colonia">Colonia</label>
+                      <input type="text" class="form-control" id="coloniaNContratante" placeholder="Colonia" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estado">Estado</label>
+                      <input type="text" class="form-control" id="estadoNContratante" placeholder="Estado" >
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="poblacion">Ciudad o Población</label>
+                      <input type="text" class="form-control" id="poblacionNContratante" placeholder="Ciudad o Población" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <label for="cp">Código Postal</label>
+                    <input type="text" class="form-control" id="cpNContratante" placeholder="Código Postal" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeneficiario" aria-expanded="false" aria-controls="collapseBeneficiario">
                 Datos del beneficiario preferente
               </button>
@@ -543,6 +701,12 @@
           </div>
         </div>
         <br><br><br>
+        <div class="text-center">
+          <button id="btnFormaPago" type="button" class="btn btn-danger  btn-lg text-center">Pago</button>
+          <br>
+          <br>
+          
+        </div>
       </div>
 
       
