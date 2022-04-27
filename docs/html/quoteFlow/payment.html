@@ -40,12 +40,19 @@
       </nav>
       <br><br><br>
       <div class="container bg-light" id="contenedorPrincipal">
-        <h3>Forma de pago</h3>
+        <h3>Datos para el pago</h3>
         <br>
         <br>
         <div class="row mb-3">
             <div class="col-md-4">
-                Modo de pago  ????
+              <label for="agente">Forma de pago</label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">Contado</option>
+                  <option value="2">Semestral</option>
+                  <option value="3">Trimestral</option>
+                  <option value="4">Mensual</option>
+              </select>
             </div>
         </div>
         <div class="row mb-3">
@@ -93,16 +100,6 @@
             <div class="col-md-4">
                 <label for="numeroTarjeta">Número de tarjeta</label>
                 <input type="text" class="form-control" id="numeroTarjeta" placeholder="Número de tarjeta" >
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-4">
-                <label for="fechaVencimiento">Fecha de vencimiento</label>
-                <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AA" >
-            </div>
-            <div class="col-md-4">
-                <label for="cvv">Código de seguridad</label>
-                <input type="text" class="form-control" id="cvv" placeholder="Código de seguridad" >
             </div>
         </div>
         <br><br>
