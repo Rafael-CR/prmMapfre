@@ -48,14 +48,23 @@
         <br>
         <div class="row mb-3">
             <div class="col-md-4">
-                <label for="numeroCotizacion">Número de cotización</label>
-                <input type="text" class="form-control" id="numeroCotizacion" placeholder="" >
+                <label for="numeroPoliza">Número de póliza</label>
+                <input type="text" class="form-control" id="numeroCotizacion" placeholder="" maxlength="13">
             </div>
             <div class="col-md-4">
-                <label for="numeroCotizacion">Nombre de la cotización</label>
-                <input type="text" class="form-control" id="numeroCotizacion" placeholder="" >
+                <label for="nombreCotizacion">Nombre de la cotización</label>
+                <input type="text" class="form-control" id="numeroCotizacion" placeholder="" maxlength="30">
+            </div>   
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="rfcContratante">RFC del contratante</label>
+                <input type="text" class="form-control" id="numeroCotizacion" placeholder="" maxlength="13">
             </div>
-            
+            <div class="col-md-4">
+                <label for="numeroCotizacion">Nombre del contratante</label>
+                <input type="text" class="form-control" id="nombreContratante" placeholder="" >
+            </div>   
         </div>
         <div class="row mb-3">
             <div class="col-md-2">
@@ -73,7 +82,7 @@
         </div>
         <br>
         <div class="card">
-            <br><br>
+            <br>
             <div class="card-body">
                 
                 <div class="row mb-3">
@@ -89,50 +98,91 @@
                 <table id="tabResultados" class="display table table-striped">
                     <thead class="table-danger text-center">
                         <tr>
-                            <th>No. de cotizaci&oacute;n</th>
-                            <th>Nombre</th>
-                            <th>Fecha de cotizaci&oacute;n</th>
+                            <th>No. de póliza</th>
+                            <th>Nombre de contratante</th>
+                            <th>RFC</th>
+                            <th>Fecha de emisión</th>
+                            <th>Vigencia</th>
+                            <th>Marca</th>
+                            <th>Descripción</th>
+                            <th>Estatus de la póliza</th>
+                            <th>Oficina/Portal</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
                         <tr>
                             <td>1</td>
-                            <td>Cotizacion 1</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
                             <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Cotizacion 2</td>
-                            <td>01/01/2020</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
+                            <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Cotizacion 3</td>
-                            <td>01/02/2020</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
+                            <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Cotizacion 4</td>
-                            <td>01/03/2020</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
+                            <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Cotizacion 5</td>
-                            <td>01/04/2020</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
+                            <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Cotizacion 6</td>
-                            <td>01/05/2020</td>
+                            <td>Juan Perez Romero</td>
+                            <td>ABCD945644</td>
+                            <td>01/10/2020</td>
+                            <td>01/10/2025</td>
+                            <td>Honda</td>
+                            <td>Civic coupe 5 ptas 1.5 cil. bolsas de aire</td>
+                            <td>Pagada</td>
+                            <td>Portal</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            
+            </div>            
         </div>
         
         <a href="#" id="link" style="display:none"></a>
-
+        <br><br><br>
     </div>
     
 </body>
