@@ -20,6 +20,16 @@
           <h2>Nueva Cotización</h2>
           <br>
           <h5>Datos del Agente</h5>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="oficina">Oficina</label>
+              <input type="text" class="form-control" id="oficina" placeholder="Oficina" >
+            </div>
+          <div class="col-md-4">
+            <label for="clave">Clave</label>
+            <input type="text" class="form-control" id="clave" placeholder="Clave" >
+          </div>
+          </div>
           
           <div class="row mb-3">
             <div class="col-md-4">
@@ -41,6 +51,31 @@
         </div>
         <h5>Cotización</h5>
           <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-Domicilio">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDomicilio" aria-expanded="true" aria-controls="flush-collapseDomicilio">
+                Domicilio de circulación
+                </button>
+              </h2>
+              <div id="flush-collapseDomicilio" class="accordion-collapse collapse" aria-labelledby="flush-Domicilio" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="cp">Código Postal</label>
+                        <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="estado">Estado</label>
+                        <input type="text" class="form-control" id="estado" placeholder="Estado" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="poblacion">Población</label>
+                        <input type="text" class="form-control" id="poblacion" placeholder="Población" >
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
@@ -102,6 +137,63 @@
                       </div>
                     </div>
                    
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Paquete y coberturas
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="row mb-3">
+                    <div class="col-md-4">
+                      <label class="form-check-label" >Selecciona los tipos de planes a cotizar</label>
+                      <br>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planAmplio" value="amplio">
+                        <label class="form-check-label" for="planAmplio">Amplio</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planLimitado" value="limitado">
+                        <label class="form-check-label" for="planLimitado">Limitado</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="planRC" value="option3">
+                        <label class="form-check-label" for="planRC">Responsabilidad Civíl</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-check-label" >Selecciona las formas de pago</label>
+                      <br>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="contado" value="contado">
+                        <label class="form-check-label" for="contado">Contado</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="semestral" value="semestral">
+                        <label class="form-check-label" for="semestral">Semestral</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="trimestral" value="trimestral">
+                        <label class="form-check-label" for="trimestral">Trimestral</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="mensual" value="mensual">
+                        <label class="form-check-label" for="mensual">Mensual</label>
+                      </div>
+                    </div>
+                      <div class="col-md-4">
+                          <label for="descuento">Descuento</label>
+                          <input type="text" class="form-control" id="descuento" placeholder="" >
+                      </div>
+                    
+                  </div>
+                  
+                  
+                  
                 </div>
               </div>
             </div>
@@ -183,88 +275,15 @@
                             </div>
                             
                         </div>
-                    </div>
-                    <br>
-                    <h5>Domicilio</h5>
-                    <div class="row mb-3">
-                        <div class="col-md-4">
-                            <label for="cp">Código Postal</label>
-                            <input type="text" class="form-control" id="cp" placeholder="Código Postal" >
-                        </div>
-                        <div class="col-md-4">
-                            <label for="estado">Estado</label>
-                            <input type="text" class="form-control" id="estado" placeholder="Estado" >
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="poblacion">Población</label>
-                            <input type="text" class="form-control" id="poblacion" placeholder="Población" >
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Planes y descuentos
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="row mb-3">
-                    <div class="col-md-4">
-                      <label class="form-check-label" >Selecciona los tipos de planes a cotizar</label>
-                      <br>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planAmplio" value="amplio">
-                        <label class="form-check-label" for="planAmplio">Amplio</label>
-                      </div>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planLimitado" value="limitado">
-                        <label class="form-check-label" for="planLimitado">Limitado</label>
-                      </div>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planRC" value="option3">
-                        <label class="form-check-label" for="planRC">Responsabilidad Civíl</label>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-check-label" >Selecciona las formas de pago</label>
-                      <br>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="contado" value="contado">
-                        <label class="form-check-label" for="contado">Contado</label>
-                      </div>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="semestral" value="semestral">
-                        <label class="form-check-label" for="semestral">Semestral</label>
-                      </div>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="trimestral" value="trimestral">
-                        <label class="form-check-label" for="trimestral">Trimestral</label>
-                      </div>
-                      <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="mensual" value="mensual">
-                        <label class="form-check-label" for="mensual">Mensual</label>
-                      </div>
-                    </div>
-                   
-                      <div class="col-md-4">
-                          <label for="descuento">Descuento</label>
-                          <input type="text" class="form-control" id="descuento" placeholder="" >
-                      </div>
-                    
-                  </div>
-                  
-                  
-                  
-                </div>
-              </div>
-            </div>
+            
           </div>
           <br>
           <div class="text-center">
-            <button id="btnCotizar" type="button" class="btn btn-danger  btn-lg text-center">Cotizar</button>
+            <button id="btnCotizar" type="button" class="btn btn-success  btn-lg text-center">Cotizar</button>
           </div>
         
           <br>
