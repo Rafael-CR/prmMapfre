@@ -12,4 +12,8 @@ $(function () {
     location.href = "../quoteFlow/issueRequest.html";
   });
 
+  
 });
+function getEmail() {
+  let email = prompt("Ingresa el email a donde quieres enviar la información", "");
+}
