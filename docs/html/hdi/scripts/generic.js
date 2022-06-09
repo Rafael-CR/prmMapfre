@@ -1,3 +1,3 @@
 $(function(){
-    $("#headerContent").load("generics/header.html"); 
+    $("#headerContent").load("../generics/header.html"); 
   });
