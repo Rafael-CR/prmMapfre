@@ -89,8 +89,11 @@
                             <label for="tipoVehiculo">Tipo de vehículo</label>
                             <select id="tipoVehiculo" class="form-select" aria-label="Default select example">
                               <option selected>Seleccionar</option>
-                              <option value="401">Autos</option>
-                              <option value="405">Pickups</option>
+                              <option value="">Vehículos residentes</option>
+                              <option value="">Camiones más de 3.5 T</option>
+                              <option value="">Camiones hasta 3.5 T</option>
+                              <option value="">Pickups</option>
+                              <option value="">Tractocamiones</option>
                             </select>
                         </div>
                         <div class="col-md-4">
@@ -104,29 +107,34 @@
                     </div>
                     <div class="row mb-3">
                       <div class="col-md-4">
-                        <label for="clasificacionVehiculo">Clasificación del vehículo</label>
-                          <select id="clasificacionVehiculo" class="form-select" aria-label="Default select example">
-                            <option selected value="401">Residente</option>
+                        <label for="usoVehiculo">Uso del vehículo</label>
+                          <select id="usoVehiculo" class="form-select" aria-label="Default select example">
+                            <option selected value="">Residentes</option>
                           </select>
-                      </div>
-                      <div class="form-group col-md-4">
-                          <label for="year">Año</label>
-                          <input type="text" class="form-control" id="year" placeholder="" >
                       </div>
                       <div class="col-md-4">
                         <label for="marca">Marca</label>
                         <input type="text" class="form-control" id="marca" placeholder="" >
                       </div>
+                      <div class="form-group col-md-4">
+                          <label for="year">Modelo</label>
+                          <input type="text" class="form-control" id="year" placeholder="" >
+                      </div>
+                      
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4">
-                            <label for="descripcion">Descripción</label>
-                            <input type="text" class="form-control" id="descripcion" placeholder="Descripción" >
+                            <label for="descripcion">Submarca</label>
+                            <input type="text" class="form-control" id="Submarca" placeholder="" >
                         </div>
+                        <div class="col-md-4">
+                          <label for="version">Versión/Transmisión</label>
+                          <input type="text" class="form-control" id="version" placeholder="" >
+                      </div>
                         <div class="form-group col-md-4">
-                            <label for="uso">Uso</label>
-                            <select id="uso" class="form-select" aria-label="Default select example">
-                              <option selected value="particular">Particular</option>
+                            <label for="servicio">Servicio</label>
+                            <select id="servicio" class="form-select" aria-label="Default select example">
+                              <option selected value="">Particular</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
@@ -153,19 +161,31 @@
                       <label class="form-check-label" >Selecciona los tipos de planes a cotizar</label>
                       <br>
                       <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planAmplio" value="amplio">
-                        <label class="form-check-label" for="planAmplio">Amplio</label>
+                        <input class="form-check-input" type="checkbox" id="miauto" value="miauto">
+                        <label class="form-check-label" for="miauto">Mi Auto</label>
                       </div>
                       <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planLimitado" value="limitado">
-                        <label class="form-check-label" for="planLimitado">Limitado</label>
+                        <input class="form-check-input" type="checkbox" id="miAutoBianual" value="miAutoBianual">
+                        <label class="form-check-label" for="miAutoBianual">Mi auto bianual</label>
                       </div>
                       <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="planRC" value="option3">
-                        <label class="form-check-label" for="planRC">Responsabilidad Civíl</label>
+                        <input class="form-check-input" type="checkbox" id="limitada" value="limitada">
+                        <label class="form-check-label" for="limitada">Limitada</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="rc" value="rc">
+                        <label class="form-check-label" for="rc">RC</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="enExceso" value="enExceso">
+                        <label class="form-check-label" for="enExceso">En exceso</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" id="iDriving" value="iDriving">
+                        <label class="form-check-label" for="iDriving">IDriving</label>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                       <label class="form-check-label" >Selecciona las formas de pago</label>
                       <br>
                       <div class="form-check ">
@@ -188,7 +208,7 @@
                       <div class="col-md-4">
                           <label for="descuento">Descuento</label>
                           <input type="text" class="form-control" id="descuento" placeholder="" >
-                      </div>
+                      </div> -->
                     
                   </div>
                   
@@ -206,10 +226,7 @@
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <div class="row mb-3">
-                        <div class="col-md-4">
-                            <label for="rfc">RFC</label>
-                            <input type="text" class="form-control" id="rfc" placeholder="RFC" >
-                        </div>
+                       
                         <div class="col-md-4">
                             <input class="form-check-input" type="radio" name="tipoPersonaCotizacion" id="personaFisicaCotizacion" value="personaFisica">
                             <label class="form-check-label" for="personaFisica">
@@ -242,40 +259,73 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-4">
-                                <label for="fechaNacimiento">Fecha de nacimiento</label>
-                                <input type="text" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" >
-                            </div>
-                            <div class="col-md-4">
-                                <label for="edad">Edad</label>
-                                <input type="text" class="form-control" id="edad" placeholder="Edad" >
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="sexo">Sexo</label>
-                                <select id="sexo" class="form-select" aria-label="Default select example">
-                                  <option selected>Seleccionar</option>
-                                  <option value="hombre">Hombre</option>
-                                  <option value="mujer">Mujer</option>
-                                </select>
-                            </div>
+                          <div class="col-md-4">
+                            <label for="rfcPersonaFisica">RFC</label>
+                            <input type="text" class="form-control" id="rfcPersonaFisica" placeholder="RFC" >
+                          </div>
+                          <div class="col-md-4">
+                            <label for="fechaNacimiento">Fecha de nacimiento</label>
+                            <input type="text" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" >
+                          </div>
+                          <div class="col-md-4">
+                              <label for="edad">Edad</label>
+                              <input type="text" class="form-control" id="edad" placeholder="Edad" >
+                          </div>
                         </div>
+                        <div class="row mb-3">
+                          <div class="col-md-4">
+                            <label for="estadoCivil">Estado Civil</label>
+                            <input type="text" class="form-control" id="estadoCivil" placeholder="" >
+                          </div>
+                          <div class="col-md-4">
+                            <label for="ocupacion">Ocupación</label>
+                            <input type="text" class="form-control" id="ocupacion" placeholder="" >
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" class="form-select" aria-label="Default select example">
+                              <option selected>Seleccionar</option>
+                              <option value="hombre">Hombre</option>
+                              <option value="mujer">Mujer</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div id="containerPersonaMoralCotizacion">
                         <br>
                         <h5>Persona Moral</h5>
                         
                         <div class="row mb-3">
-                            <div class="col-md-8">
-                                <label for="razonSocial">Denominación o Razon social</label>
-                                <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
-                            </div>
-                            <div class="col-md-4">
-                                <label for="fechaConstitucion">Fecha de constitución</label>
-                                <input type="text" class="form-control" id="fechaConstitucion" placeholder="Fecha de constitución" >
-                            </div>
-                            
+                          <div class="col-md-6">
+                              <label for="razonSocial">Denominación o Razon social</label>
+                              <input type="text" class="form-control" id="razonSocial" placeholder="Denominación o Razon social" >
+                          </div>
+                          <div class="col-md-4">
+                            <label for="rfcPersonaMoral">RFC</label>
+                            <input type="text" class="form-control" id="rfcPersonaMoral" placeholder="RFC" >
+                          </div>
                         </div>
-                    </div>                    
+                        <div class="row mb-3">
+                          <div class="col-md-4">
+                              <label for="fechaConstitucion">Fecha de constitución</label>
+                              <input type="text" class="form-control" id="fechaConstitucion" placeholder="Fecha de constitución" >
+                          </div>
+                        </div>
+                    </div>  
+                    <div class="row mb-3">
+                      <div class="col-md-4">
+                        <label for="cochera">¿Cuenta con cochera?</label>
+                      </div>
+                    </div> 
+                    <div class="row mb-3">
+                      <div class="col-md-4">
+                        Si
+                        <input class="form-check-input" type="radio" name="conCochera" id="conCochera" value="Si">
+                        No
+                        <input class="form-check-input" type="radio" name="conCochera" id="sinCochera" value="No">
+                      </div>
+                    </div>                 
                 </div>
               </div>
             </div>
