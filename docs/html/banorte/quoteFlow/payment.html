@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de pago</title>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../../styles/main.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../scripts/quoteFlow/payment.js"></script>
+    <script src="../scripts/generic.js" crossorigin="anonymous"></script>
+    <div id="headerContent"></div>
+      <br><br><br>
+      <div class="container bg-light" id="contenedorPrincipal">
+        <h3>Datos para el pago</h3>
+        <br>
+        <br>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="agente">Forma de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Anual(Contado, 3 MSI, 6 MSI, 12 MSI)</option>
+                    <option value="2">Semestral</option>
+                    <option value="3">Trimestral</option>
+                    <option value="4">Mensual</option>
+                </select>
+              </div>
+            <div class="col-md-4">
+                <label for="agente">Tipo de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">Referencia bancaria</option>
+                  <option value="2">Pago con tarjeta</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="agente">Medio de pago</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar</option>
+                  <option value="1">Efectivo</option>
+                  <option value="2">Cuenta de cheques</option>
+                  <option value="3">Tarjeta de crédito</option>
+                </select>
+            </div>
+            
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="tipoTarjeta">Tipo de tarjeta</label>
+            <select id="tipoTarjeta" class="form-select" aria-label="Default select example">
+                <option selected>Seleccionar</option>
+                <option value="1">VISA</option>
+                <option value="2">MasterCard</option>
+                <option value="3">American Express</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="banco">Banco</label>
+            <select id="banco" class="form-select" aria-label="Default select example">
+                <option selected>Seleccionar</option>
+                <option value="1">BBVA</option>
+                <option value="2">HSBC</option>
+                <option value="3">Citi-Banamex</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="nombreTitular">Nombre del titular</label>
+            <input type="text" class="form-control" id="nombreTitular" placeholder="" >
+          </div>
+          <div class="col-md-4">
+            <label for="numeroTarjeta">Número de tarjeta</label>
+            <input type="text" class="form-control" id="numeroTarjeta" placeholder="" >
+          </div>
+        </div>
+        
+        <br><br>
+        <div class="text-center">
+            <button id="btnVolver" type="button" class="btn btn-outline-danger  btn-lg text-center">Volver</button>
+            <button id="btnEmitir" type="button" class="btn btn-danger  btn-lg text-center">Emitir póliza</button>
+            <br>
+            <br>
+            
+        </div>
+      </div>
+</body>
+</html>
