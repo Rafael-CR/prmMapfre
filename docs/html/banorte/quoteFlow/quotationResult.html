@@ -81,9 +81,9 @@
                 <div class="col-md-4">
                   <label for="claveVehiculo">Clave del vehículo</label>
                   <input type="text" class="form-control" id="claveVehiculo" value="123456789" disabled="true">
-              </div>
+                </div>
                 <div class="col-md-4">
-                    <label for="tipoVehiculo">Tipo de vehículo</label>
+                    <label for="tipoVehiculo">Producto(Tipo de vehículo)</label>
                     <select id="tipoVehiculo" class="form-select" aria-label="Default select example" disabled="true">
                       <option selected>Seleccionar</option>
                       <option value="">Vehículos residentes</option>
@@ -93,609 +93,760 @@
                       <option value="">Tractocamiones</option>
                     </select>
                 </div>
+                <div class="col-md-4">
+                  <label for="categoria">Categoria (Clasificación del vehículo)</label>
+                  <input type="text" class="form-control" id="categoria" value="123456789" disabled="true">
+                </div>
             </div>
             <div class="row mb-3">
-              <div class="col-md-4">
-                <label for="usoVehiculo">Uso del vehículo</label>
-                  <select id="usoVehiculo" class="form-select" aria-label="Default select example" disabled="true">
-                    <option selected value="">Residentes</option>
-                  </select>
-              </div>
               <div class="col-md-4">
                 <label for="marca">Marca</label>
                 <input type="text" class="form-control" id="marca" disabled="true">
               </div>
+              <div class="col-md-4">
+                <label for="submarca">Tipo (Submarca)</label>
+                <input type="text" class="form-control" id="submarca" disabled="true">
+              </div>
               <div class="form-group col-md-4">
-                  <label for="year">Modelo</label>
+                  <label for="year">Modelo (Año)</label>
                   <input type="text" class="form-control" id="year" disabled="true">
               </div>
               
             </div>
             <div class="row mb-3">
                 <div class="col-md-4">
-                    <label for="descripcion">Submarca</label>
-                    <input type="text" class="form-control" id="Submarca" disabled="true">
+                    <label for="descripcion">Descripcion (Versión)</label>
+                    <input type="text" class="form-control" id="descripcion" disabled="true">
                 </div>
                 <div class="col-md-4">
-                  <label for="version">Versión/Transmisión</label>
-                  <input type="text" class="form-control" id="version" disabled="true">
-              </div>
-                <div class="form-group col-md-4">
-                    <label for="servicio">Servicio</label>
-                    <select id="servicio" class="form-select" aria-label="Default select example" disabled="true">
-                      <option selected value="">Particular</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="valorUnidad">Valor de la unidad</label>
-                  <select id="valorUnidad" class="form-select" aria-label="Default select example" disabled="true">
-                    <option selected value="comercial">Comercial</option>
+                  <label for="uso">Uso del vehículo</label>
+                  <select id="tipoVehiculo" class="form-select" aria-label="Default select example" disabled="true">
+                    <option selected>Seleccionar</option>
+                    <option value="">Particular</option>
+                    <option value="">Socio conductor app</option>
+                    <option value="">Utilitario</option>
                   </select>
-              </div>
+                </div>
+                
             </div>
             <br>
             <h5 class="card-subtitle mb-2 text-muted ">Detalle de la cotización</h5>
             <br>
-            <table class="table table-borderless " data-click-to-select="true">
-              <thead class="table-danger">
-                  <tr class="fs-5">
-                  <th scope="col"></th>
-                  <th scope="col" >Coberturas</th>
-                  <th scope="col" >Suma asegurada</th>
-                  <th scope="col" >Deducible</th>
-                  <th scope="col" class="text-center">HDI IDriving</th>
-                  <th scope="col" class="text-center">HDI en mi auto</th>
-                  <th scope="col" class="text-center">HDI en mi auto bianual</th>
-                  <th scope="col" class="text-center">HDI Limitada</th>
-                  <th scope="col" class="text-center">HDI RC</th>
-                  <th scope="col" class="text-center">RC en exceso</th>
-                  </tr>
-                  <tr class="fs-5">
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan1" name="planSeleccion" value="plan1"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan2" name="planSeleccion" value="plan2"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan3" name="planSeleccion" value="plan3"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan5" name="planSeleccion" value="plan4"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan5" name="planSeleccion" value="plan5"></th>
-                    <th scope="col" class="text-center"><input type="radio" id="plan6" name="planSeleccion" value="plan6"></th>
-                    </tr>
-              </thead>
-              <tbody>
-                  <tr >
-                  <th>-</th>
-                  <th scope="row">DAÑOS MATERIALES</th>
-                  <td>Valor comercial</td>
-                  <td>
-                      <select id="deducibleDM" class="form-select" aria-label="Default select example">
-                      <option value="5" selected>5%</option>
-                      </select>
-                  </td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr class="table-light">
-                    <th>-</th>
-                  <th scope="row" >ROBO TOTAL</th>
-                  <td >Valor comercial(*)</td>
-                  <td >
-                      <select id="deducibleRT" class="form-select" aria-label="Default select example">
-                      <option value="5" selected>10%</option>
-                      </select>
-                  </td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                  </td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>-</th>
-                  <th scope="row" >RESPONSABILIDAD CIVIL LUC.</th>
-                  <td >
-                      <div class="form-group">
-                      <input type="text" class="form-control" id="rcBienes" placeholder="" value="$1,500,000.00" readonly>
-                      </div>
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                  </td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                  </td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr class="table-light">
-                    <th>-</th>
-                  <th scope="row">EXTENSIÓN DE RC PARA AUTOMOVIL PARTICULAR</th>
-                  <td >AMPARADA</td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>-</th>
-                  <th scope="row">ASISTENCIA HDI IDRIVING</th>
-                  <td >AMPARADA</td>
-                  <td >-</td>
-                  <td class="text-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr class="table-light">
-                    <th>-</th>
-                  <th scope="row" >ASISTENCIA JURIDICA</th>
-                  <td >AMPARADA</td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr class="border-3 border-start-0 border-end-0 border-bottom-0 border-danger">
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >GASTOS MÉDICOS OCUPANTES</th>
-                  <td >
-                    <div class="form-group">
-                    <input type="text" class="form-control" id="rcBienes" placeholder="" value="$100,000.00" readonly>
-                    </div>
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr class="table-light">
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >RESPONSABILIDAD CIVIL EN EXCESO POR MUERTE A PERSONAS</th>
-                  <td>
-                      <div class="form-group">
-                      <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$2,000,000.00" readonly>
-                      </div>
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >RESPONSABILIDAD CIVIL FAMILIAR</th>
-                  <td >$100,000.00</td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ASISTENCIA EN VIAJES</th>
-                  <td >AMPARADA</td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ASISTENCIA MÉDICA</th>
-                  <td >AMPARADA</td>
-                  <td >-</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                    </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                  </svg>
-                </td>
-                <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >RESPONSABILIDAD CIVIL OCUPANTES</th>
-                  <td >
-                      <div class="form-group">
-                      <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$350,000.00" readonly>
-                      </div>
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
-                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>
-                  </td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr class="border-3 border-start-0 border-end-0 border-bottom-0 border-danger"></tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >EXCENCION DE DEDUCIBLE</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ADAPTACIONES Y CONVERSIONES DM</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ADAPTACIONES Y CONVERSIONES RT</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >EQUIPO ESPECIAL DAÑOS MATERIALES</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >EQUIPO ESPECIAL ROBO TOTAL</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ACCIDENTES AUTOMOVILISTICOS AL CONDUCTOR</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >RESPONSABILIDAD CIVIL USA Y CANADA</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >AYUDA PARA GASTOS DE TRANSPORTE HDI</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >AUTO SIEMPRE</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  <td class="text-center">-</td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
-                    </th>
-                  <th scope="row" >ASISTENCIA FUNERARIA</th>
-                  <td >
-                  </td>
-                  <td >-</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">Op</td>
-                  <td class="text-center">-</td>
-                  </tr>
-              </tbody>
-          </table>
+            <div class="card">
+              <div class="card-body">
+              <table class="table table-borderless " data-click-to-select="true">
+                  <thead class="table-danger">
+                      <tr class="fs-5">
+                      <th scope="col"></th>
+                      <th scope="col" >Coberturas</th>
+                      <th scope="col" >Suma asegurada</th>
+                      <th scope="col" >Deducible</th>
+                      <th scope="col" class="text-center">PREMIER</th>
+                      <th scope="col" class="text-center">INTEGRAL PLUS</th>
+                      <th scope="col" class="text-center">PROTEGIDO PLUS</th>
+                      <th scope="col" class="text-center">PREVENTIVO</th>
+                      <th scope="col" class="text-center">PROTECCION BÁSICA</th>
+                      <th scope="col" class="text-center">BÁSICA MÉXICO</th>
+                      </tr>
+                      <tr class="fs-5">
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan1" name="planSeleccion" value="plan1"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan2" name="planSeleccion" value="plan2"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan3" name="planSeleccion" value="plan3"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan5" name="planSeleccion" value="plan4"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan5" name="planSeleccion" value="plan5"></th>
+                        <th scope="col" class="text-center"><input type="radio" id="plan6" name="planSeleccion" value="plan6"></th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th>-</th>
+                        <th scope="row">DAÑOS MATERIALES</th>
+                        <td>Valor comercial</td>
+                        <td>
+                            <select id="deducibleDM" class="form-select" aria-label="Default select example">
+                            <option value="5" selected>5%</option>
+                            </select>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr  class="table-light">
+                        <th>-</th>
+                        <th scope="row">ROTURA DE CRISTALES</th>
+                        <td>Valor comercial</td>
+                        <td>
+                            <select id="deducibleDM" class="form-select" aria-label="Default select example">
+                            <option value="5" selected>5%</option>
+                            </select>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>-</th>
+                        <th scope="row" >ROBO TOTAL</th>
+                        <td >Valor comercial(*)</td>
+                        <td >
+                            <select id="deducibleRT" class="form-select" aria-label="Default select example">
+                            <option value="5" selected>10%</option>
+                            </select>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr  class="table-light">
+                        <th>-</th>
+                        <th scope="row" >RESPONSABILIDAD CIVIL DAÑOS A TERCEROS</th>
+                        <td >
+                            <div class="form-group">
+                            <input type="text" class="form-control" id="rcBienes" placeholder="" value="$1,500,000.00" readonly>
+                            </div>
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>-</th>
+                        <th scope="row">GASTOS MÉDICOS OCUPANTES LUC</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr class="table-light">
+                        <th>-</th>
+                        <th scope="row">EXTENSIÓN DE RC PARA AUTOMOVIL PARTICULAR</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        </tr>
+
+                        <tr>
+                          <th>-</th>
+                        <th scope="row" >ASISTENCIA JURIDICA</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr class="table-light">
+                        <th>-</th>
+                        <th scope="row" >ASISTENCIA VEHICULAR</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>-</th>
+                        <th scope="row" >MUERTE CONDUCTOR POR ACCIDENTES AUTOMOVILISTICOS</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr class="table-light">
+                        <th>-</th>
+                        <th scope="row" >SERVICIOS PREMIUM</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>-</th>
+                        <th scope="row" >AUTO SUSTITUTO POR ROBO TOTAL</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr class="border-3 border-start-0 border-end-0 border-bottom-0 border-danger">
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >AUTO SUSTITUTO POR PERDIDA TOTAL DM</th>
+                        <td >
+                          <div class="form-group">
+                          <input type="text" class="form-control" id="rcBienes" placeholder="" value="$100,000.00" readonly>
+                          </div>
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr class="table-light">
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >ELIMINAR DEDUC/DEVOL. PRIMA PT X DM</th>
+                        <td>
+                            <div class="form-group">
+                            <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$2,000,000.00" readonly>
+                            </div>
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >ELIMINAR DEDUC/DEVOL. PRIMA ROBO TOTAL X DM</th>
+                        <td >$100,000.00</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >RESPONSABILIDAD CIVIL OCUPANTES</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >SERVICIOS FUNERARIOS</th>
+                        <td >AMPARADA</td>
+                        <td >-</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >PROTECCIÓN EN ESTADOS UNIDOS</th>
+                        <td >
+                            <div class="form-group">
+                            <input type="text" class="form-control" id="gastosMedicos" placeholder="" value="$350,000.00" readonly>
+                            </div>
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="danger" class=" bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >AUTO SUSTITUTO POR PERDIDA PARCIAL DM</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >SERVICIO VIAL 360</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                          <th>
+                            <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                          </th>
+                        <th scope="row" >EQUIPO ESPECIAL DAÑOS MATERIALES</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                          <th>
+                            <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                          </th>
+                        <th scope="row" >EQUIPO ESPECIAL ROBO TOTAL</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >RESPONSABILIDAD CIVIL USA Y CANADA</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >AYUDA PARA GASTOS DE TRANSPORTE BANORTE</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >AUTO SIEMPRE</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <input type="checkbox" id="cobertura1" name="cobertura1" value="cobertura1">
+                        </th>
+                        <th scope="row" >ASISTENCIA FUNERARIA</th>
+                        <td >
+                        </td>
+                        <td >-</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">Op</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+
+                  </tbody>
+              </table>
+            </div>
+            </div>
             <br>
             <br>
             <div class="text-center">
