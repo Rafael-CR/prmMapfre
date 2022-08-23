@@ -97,38 +97,38 @@
                   <label for="categoria">Categoria (Clasificación del vehículo)</label>
                   <input type="text" class="form-control" id="categoria" value="123456789" disabled="true">
                 </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col-md-4">
-                <label for="marca">Marca</label>
-                <input type="text" class="form-control" id="marca" disabled="true">
               </div>
-              <div class="col-md-4">
-                <label for="submarca">Tipo (Submarca)</label>
-                <input type="text" class="form-control" id="submarca" disabled="true">
-              </div>
-              <div class="form-group col-md-4">
-                  <label for="year">Modelo (Año)</label>
-                  <input type="text" class="form-control" id="year" disabled="true">
-              </div>
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label for="marca">Marca</label>
+                  <input type="text" class="form-control" id="marca" disabled="true">
+                </div>
+                <div class="col-md-4">
+                  <label for="submarca">Tipo (Submarca)</label>
+                  <input type="text" class="form-control" id="submarca" disabled="true">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="year">Modelo (Año)</label>
+                    <input type="text" class="form-control" id="year" disabled="true">
+                </div>
               
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="descripcion">Descripcion (Versión)</label>
-                    <input type="text" class="form-control" id="descripcion" disabled="true">
-                </div>
-                <div class="col-md-4">
-                  <label for="uso">Uso del vehículo</label>
-                  <select id="tipoVehiculo" class="form-select" aria-label="Default select example" disabled="true">
-                    <option selected>Seleccionar</option>
-                    <option value="">Particular</option>
-                    <option value="">Socio conductor app</option>
-                    <option value="">Utilitario</option>
-                  </select>
-                </div>
-                
-            </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col-md-4">
+                      <label for="descripcion">Descripcion (Versión)</label>
+                      <input type="text" class="form-control" id="descripcion" disabled="true">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="uso">Uso del vehículo</label>
+                    <select id="tipoVehiculo" class="form-select" aria-label="Default select example" disabled="true">
+                      <option selected>Seleccionar</option>
+                      <option value="">Particular</option>
+                      <option value="">Socio conductor app</option>
+                      <option value="">Utilitario</option>
+                    </select>
+                  </div>
+                  
+              </div>
             <br>
             <h5 class="card-subtitle mb-2 text-muted ">Detalle de la cotización</h5>
             <br>
@@ -846,20 +846,203 @@
                   </tbody>
               </table>
             </div>
-            </div>
+            </div>            
             <br>
             <br>
-            <div class="text-center">
-              <button id="btnGuardar" type="button" class="btn btn-outline-danger  btn-lg text-center">Guardar</button>
-              <button id="btnEnviar" type="button" class="btn btn-outline-danger  btn-lg text-center" onclick="getEmail()">Enviar</button>
-              <button id="btnImprimir" type="button" class="btn btn-outline-danger  btn-lg text-center">Imprimir</button>
+            <div class="row mb-3">
+              <div class="form-group col-md-4">
+                <h5 class="card-subtitle mb-2 text-muted">Resumen de cotización</h5>
+              </div>
               <br>
+              <div class="row mb-3 fw-bold">
+                <div class="form-group col-md-4">
+                  <label for="folioCotizacion">Concepto</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="fechaCotizacion">Monto</label>
+                </div>
+                
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">Prima Neta</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">Descuento (30%)/ Cesión de comisión</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">Financiamiento</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">Derecho Póliza</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">IVA</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
               <br>
-              <button id="btnEmision" type="button" class="btn btn-danger  btn-lg text-center">Solicitud de emisión</button>
+              <div class="row mb-3 fw-bold">
+                <div class="form-group col-md-4">
+                  <label for="inicioVigencia">Total a pagar</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="finVigencia">$5,946.37</label>
+                </div>
+              </div>
             </div>
+            <br><br>
+            <div class="row mb-3">
+              <div class="form-group col-md-4">
+                <h5 class="card-subtitle mb-2 text-muted">Opciones de pago</h5>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Seleccion</th>
+                  <th scope="col">Frecuencia</th>
+                  <th scope="col">Primer pago</th>
+                  <th scope="col">Pagos subsecuentes</th>
+                  <th scope="col">Prima</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Pago único</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Anual 6 MSI Banorte</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Anual 6 MSI Banamex/Bancomer</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Anual 6 MSI otros bancos</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Anual 12 MSI Banorte</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Semestral</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Cuatrimestral</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Trimestral</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Bimestral</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <input type="radio" id="op1" name="opcionPago" value="op1">
+                  </th>
+                  <td>Mensual</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                  <td>$5946.38</td>
+                </tr>
+              </tbody>
+            </table>
+            *La prima puede variar de acuerdo al Código Postal del domicilio del contratante
           </div>
           <br>
+          <br>
+
+          
+
+
+          <br><br>
+          <div class="text-center">
+            <button id="btnGuardar" type="button" class="btn btn-outline-danger  btn-lg text-center">Guardar</button>
+            <button id="btnEnviar" type="button" class="btn btn-outline-danger  btn-lg text-center" onclick="getEmail()">Enviar</button>
+            <button id="btnImprimir" type="button" class="btn btn-outline-danger  btn-lg text-center">Imprimir</button>
+            <br>
+            <br>
+            <button id="btnEmision" type="button" class="btn btn-danger  btn-lg text-center">Solicitud de emisión</button>
+          </div>
+          <br><br><br>
         </div>
+
+        
         <br><br><br>
     </div>
     
