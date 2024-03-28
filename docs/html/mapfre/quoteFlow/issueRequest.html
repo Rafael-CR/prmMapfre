@@ -16,7 +16,7 @@
     <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand ms" href="../index.html">
-            <img src="../../assets/mapfre_logo.png" alt="" width="120" height="25" class="  me-auto">
+            <img src="../../../assets/mapfre_logo.png" alt="" width="120" height="25" class="  me-auto">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,6 +41,30 @@
       <div class="container bg-light" id="contenedorPrincipal">
         <h3>Solicitud de Emisión de póliza</h3>
         <br>
+        <br>
+		<div class="row mb-3">
+      <div class="col-md-4">
+        <label asp-for="NumCotizacion" class="form-label"></label>
+			  <input asp-for="NumCotizacion" class="form-control" disabled="disabled" />
+      </div>
+      <div class="col-md-4">
+<label asp-for="InicioVigencia" class="form-label"></label>
+			<input asp-for="InicioVigencia" class="form-control" disabled="disabled" />
+      </div>
+      <div class="col-md-4">
+<label asp-for="FinVigencia" class="form-label"></label>
+			<input asp-for="FinVigencia" class="form-control" disabled="disabled" />			
+      </div>
+			
+		</div>
+		<div class="row mb-3">
+      <div class="col-md-4">
+        <label asp-for="Alias" class="form-label"></label>
+			<input asp-for="Alias" class="form-control" disabled="disabled" />
+      </div>
+						
+		</div>
+		<br>
         <br>
         <h4>Datos Complementarios</h4>
         <br>

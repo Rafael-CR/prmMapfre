@@ -138,10 +138,6 @@
                 <div class="accordion-body">
                     <div class="row mb-3">
                         <div class="col-md-4">
-                            <label for="rfc">RFC</label>
-                            <input type="text" class="form-control" id="rfc" placeholder="RFC" >
-                        </div>
-                        <div class="col-md-4">
                             <input class="form-check-input" type="radio" name="tipoPersonaCotizacion" id="personaFisicaCotizacion" value="personaFisica">
                             <label class="form-check-label" for="personaFisica">
                                 Persona Física
@@ -157,7 +153,13 @@
                     <div id="containerPersonaFisicaCotizacion">
                         <br>
                         <h5>Persona Fisica</h5>
-                        
+                        <div class="row mb-3">
+                          <div class="col-md-4">
+                            <label asp-for="RFC" class="form-label"></label>
+                            <input asp-for="RFC" class="form-control"/>
+                            <span asp-validation-for="RFC" class="text-danger"></span>
+                          </div>
+                        </div>
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label for="nombre">Nombre</label>
